@@ -1,0 +1,50 @@
+﻿@if (Session["Name"] == null)
+{
+    string output = "The Session hasn't been initialized";
+
+    @output
+}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+@{
+    string name = (string)Session["Name"];
+    string email = (string)Session["Email"];
+    string pw = (string)Session["Password"];
+    int age = (int)Session["Age"];
+}
+
+<h2>Welcome, @name</h2>
+<table>
+    <tr>
+        <th>User Name     </th>
+        <th>Email         </th>
+        <th>Password      </th>
+        <th>Age           </th>
+    </tr>
+    <tr>
+        <td>@name</td>
+        <td>@email</td>
+        <td>@pw</td>
+        <td>@age</td>
+    </tr>
+
+
+
+</table>

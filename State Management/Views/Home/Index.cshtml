@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "User Registration";
+}
+
+
+<h1>Welcome New User</h1>
+
+<form action="/Home/About" method="post">
+    <h3>User Name: </h3>
+    <input name="userName" type="text" placeholder="Name" required/> <br />
+    <h3>Email: </h3>
+    <input name="email" type="email" placeholder="example@email.com" required /><br />
+    <h3>Password: </h3>
+    <input name="pw" type="password" placeholder="Password" required /> <br />
+    <h3>Age: </h3>
+    <input name="age" type="number" placeholder="18" required /> <br />
+    <button type="submit">Submit</button>
+
+</form>
